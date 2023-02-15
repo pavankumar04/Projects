@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="list-row">
+    <div class="col-md-8">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Search"
+          style="margin-top: 2%;" [(ngModel)]="title"/>
+        <div class="input-group-append" style="margin-top: 2%;">
+          <button class="btn btn-outline-primary" (click)="searchByTitle()">Search</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <h3>List of Tutorials</h3>
+      <ul class="list-group">
+        <li class="list-group-item"
+          *ngFor="let tutorial of tutorials; let i = index"
+          [class.active]="i == currentIndex"
+          (click) = "setActiveTutorial(tutorial, i)">
+          {{tutorial.title}}
+      </li>
+      </ul>
+    </div>
+
+    <div class="col-md-6 list">
+      <div *ngIf="selectedTutorial.tutorialId">
+        <h4>Tutorial Info</h4>
+        <div>
+          <label for="desc"><strong>Description: </strong></label>
+          {{ selectedTutorial.description }}
+        </div>
+        <div>
+          <label for="status"><strong>Status: </strong></label>
+          {{ selectedTutorial.published }}
+        </div>
+        <button class="btn btn-info">Details</button>
+      </div>
+    </div>
+  </div>
+</div>
+

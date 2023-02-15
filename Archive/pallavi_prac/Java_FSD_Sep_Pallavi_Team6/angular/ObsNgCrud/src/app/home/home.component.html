@@ -1,0 +1,160 @@
+<div class="main-top">
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="text-slid-box">
+              <a class="navbar-brand" href="#">
+                <h4>Turn A Page With Us</h4>
+              </a>
+            </div>
+        </div>
+        <div class="right-phone-box">
+            <p>Call US :- <a href="#"> +91 1234567890</a></p>
+        </div>
+        <div class="our-link">
+            <ul>
+                <li><a [routerLink]="['/login',0]" routerLinkActive="home"
+                  [routerLinkActiveOptions]="{exact:true}">
+                    My Account</a></li>
+                <li><a href="#">Our location</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div>
+  <header class="main-header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand"><img src="assets/images/logo3.png" class="logo" alt=""></a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-menu">
+          <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+            <li class="nav-item active"><a class="nav-link" (click)="loadBooks()">Home</a></li>
+            <li class="nav-item"><a class="nav-link">About Us</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button"
+                data-toggle="dropdown" aria-expanded="false">
+                Categories
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" (click)="filterBooks('Thriller')">Thriller</a>
+                <a class="dropdown-item" (click)="filterBooks('Fantasy')">Fantasy</a>
+                <a class="dropdown-item" (click)="filterBooks('Horror')">Horror</a>
+                <a class="dropdown-item" (click)="filterBooks('Romance')">Romance</a>
+                <a class="dropdown-item" (click)="filterBooks('Sci-Fi')">Sci-Fi</a>
+              </div>
+            </li>
+
+            <li class="nav-item"><a class="nav-link">Our Service</a></li>
+            <li class="nav-item"><a class="nav-link">Contact Us</a></li>
+            <li class="search nav-item"><a class="nav-link"><i class="fa fa-search"></i></a></li>
+              <li class="side-menu nav-item"><a  class="nav-link">
+                <i class="fa fa-shopping-bag"></i>
+              </a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="product-section layout-padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h3>
+           Our <span> Books</span>
+        </h3>
+      </div>
+      <div class="row" *ngFor="let book of actualSet; let i = index" style=" margin-left: -4%;">
+        <div class="col" *ngFor="let b of actualSet[i]">
+          <div class="col-sm-6">
+            <div class="box">
+              <div class="img-box" style="margin-bottom: -29%;">
+                 <img src="assets/books/na.png" alt="">
+              </div>
+              <div class="detail-box" style="width: 300px; margin-top: 30%;">
+                 <h5>
+                    {{b.title}}
+                 </h5>
+                 <h6>
+                    {{b.price | currency: 'INR'}}
+                 </h6>
+              </div>
+              <div class="option_container" style="width: 230px;">
+                <div class="options">
+                  <a class="option1 btn btn-outline-info btn-rounded" (click)="showBookDetails(b.bookId, 0)">
+                    View Details
+                  </a>
+                  <a class="option2 btn btn-outline-secondary btn-rounded" style="margin-left: 4%" (click)="goToCart(b.bookId, 0)">
+                    Buy Now
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer style="position:relative; margin-top: 8%;">
+  <div class="footer-main">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-4 col-md-12 col-sm-12">
+                  <div class="footer-widget">
+                      <h4>About The Page Age</h4>
+                      <p>A One Stop Shop for All Your Reading Needs. </p>
+                      <ul>
+                          <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                          <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                          <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                          <li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
+                          <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                          <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
+                          <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-12 col-sm-12">
+                  <div class="footer-link">
+                      <h4>Information</h4>
+                      <ul>
+                          <li><a href="#">About Us</a></li>
+                          <li><a href="#">Customer Service</a></li>
+                          <li><a href="#">Our Sitemap</a></li>
+                          <li><a href="#">Terms &amp; Conditions</a></li>
+                          <li><a href="#">Privacy Policy</a></li>
+                          <li><a href="#">Delivery Information</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-12 col-sm-12">
+                  <div class="footer-link-contact">
+                      <h4>Contact Us</h4>
+                      <ul>
+                          <li>
+                              <p><i class="fas fa-map-marker-alt"></i>Address: No. 6, Fable Building <br>Preston Street, Fantasy Town<br> Dream State 10101 </p>
+                          </li>
+                          <li>
+                              <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+91-1234567890">+91-1234567890</a></p>
+                          </li>
+                          <li>
+                              <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@tpa.com">contactinfo@tpa.com</a></p>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="footer-copyright">
+    <p class="footer-company">All Rights Reserved. &copy; 2022 <a href="#">ThePageAge</a>
+  </div>
+</footer>

@@ -1,0 +1,61 @@
+<br>
+<div style="text-align:center">
+<h1>
+
+Hotel Management System
+</h1>
+
+</div>
+<br>
+<br>
+<br>
+
+<div class = "bg">
+
+<table border="1" align ="center">
+
+<thead>
+
+<tr>
+
+<th>Room No</th>
+
+<th>Room Type</th>
+
+<th>Room  cost</th>
+
+ 
+</tr>
+
+</thead>
+<tbody>
+  <tr *ngFor='let r of room'>
+   
+    <td>
+      <h5>{{r.roomNo}}</h5>
+    </td>
+    <td>
+      <h5></h5>
+    </td>
+    <td>
+      <h5></h5>
+    </td>
+     
+    <td>        
+      
+        <button class="btn btn-default">Book room</button>
+      
+          </td>
+          
+    
+    
+  </tr>
+  <tr *ngIf="!room || room.length==0">
+    <td colspan="5">
+      No rooms available
+    </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
