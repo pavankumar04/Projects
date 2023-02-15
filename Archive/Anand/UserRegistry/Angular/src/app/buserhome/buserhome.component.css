@@ -1,0 +1,17 @@
+#intro {
+  background-image: url(../../assets/seasidelow.webp);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.view {
+  height: 100vh;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 10px;
+  margin: 0 auto;
+}

@@ -1,0 +1,50 @@
+17-Jan-2023 18:23:03.211 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.27
+17-Jan-2023 18:23:03.224 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Oct 3 2022 14:18:31 UTC
+17-Jan-2023 18:23:03.225 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.27.0
+17-Jan-2023 18:23:03.226 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+17-Jan-2023 18:23:03.226 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+17-Jan-2023 18:23:03.227 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+17-Jan-2023 18:23:03.227 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-19
+17-Jan-2023 18:23:03.228 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           19.0.1+10-21
+17-Jan-2023 18:23:03.228 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+17-Jan-2023 18:23:03.228 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\pavan\Desktop\production\apache-tomcat-10.0.27-windows-x64\apache-tomcat-10.0.27
+17-Jan-2023 18:23:03.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\pavan\Desktop\production\apache-tomcat-10.0.27-windows-x64\apache-tomcat-10.0.27
+17-Jan-2023 18:23:03.265 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+17-Jan-2023 18:23:03.265 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+17-Jan-2023 18:23:03.265 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+17-Jan-2023 18:23:03.271 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+17-Jan-2023 18:23:03.271 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+17-Jan-2023 18:23:03.271 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\pavan\Desktop\production\apache-tomcat-10.0.27-windows-x64\apache-tomcat-10.0.27\conf\logging.properties
+17-Jan-2023 18:23:03.271 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+17-Jan-2023 18:23:03.271 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+17-Jan-2023 18:23:03.271 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+17-Jan-2023 18:23:03.274 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+17-Jan-2023 18:23:03.274 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\pavan\Desktop\production\apache-tomcat-10.0.27-windows-x64\apache-tomcat-10.0.27
+17-Jan-2023 18:23:03.274 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\pavan\Desktop\production\apache-tomcat-10.0.27-windows-x64\apache-tomcat-10.0.27
+17-Jan-2023 18:23:03.274 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\pavan\Desktop\production\apache-tomcat-10.0.27-windows-x64\apache-tomcat-10.0.27\temp
+17-Jan-2023 18:23:03.283 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+17-Jan-2023 18:23:03.283 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+17-Jan-2023 18:23:03.312 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+17-Jan-2023 18:23:04.043 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+17-Jan-2023 18:23:04.100 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [1342] milliseconds
+17-Jan-2023 18:23:04.242 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+17-Jan-2023 18:23:04.243 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.27]
+17-Jan-2023 18:23:04.268 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\pavan\Desktop\production\apache-tomcat-10.0.27-windows-x64\apache-tomcat-10.0.27\webapps\docs]
+17-Jan-2023 18:23:04.962 WARNING [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [108] milliseconds.
+17-Jan-2023 18:23:05.002 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\pavan\Desktop\production\apache-tomcat-10.0.27-windows-x64\apache-tomcat-10.0.27\webapps\docs] has finished in [734] ms
+17-Jan-2023 18:23:05.002 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\pavan\Desktop\production\apache-tomcat-10.0.27-windows-x64\apache-tomcat-10.0.27\webapps\examples]
+17-Jan-2023 18:23:05.989 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\pavan\Desktop\production\apache-tomcat-10.0.27-windows-x64\apache-tomcat-10.0.27\webapps\examples] has finished in [987] ms
+17-Jan-2023 18:23:05.990 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\pavan\Desktop\production\apache-tomcat-10.0.27-windows-x64\apache-tomcat-10.0.27\webapps\host-manager]
+17-Jan-2023 18:23:06.067 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\pavan\Desktop\production\apache-tomcat-10.0.27-windows-x64\apache-tomcat-10.0.27\webapps\host-manager] has finished in [77] ms
+17-Jan-2023 18:23:06.071 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\pavan\Desktop\production\apache-tomcat-10.0.27-windows-x64\apache-tomcat-10.0.27\webapps\manager]
+17-Jan-2023 18:23:06.140 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\pavan\Desktop\production\apache-tomcat-10.0.27-windows-x64\apache-tomcat-10.0.27\webapps\manager] has finished in [73] ms
+17-Jan-2023 18:23:06.140 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\pavan\Desktop\production\apache-tomcat-10.0.27-windows-x64\apache-tomcat-10.0.27\webapps\ROOT]
+17-Jan-2023 18:23:06.189 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\pavan\Desktop\production\apache-tomcat-10.0.27-windows-x64\apache-tomcat-10.0.27\webapps\ROOT] has finished in [49] ms
+17-Jan-2023 18:23:06.189 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\pavan\Desktop\production\apache-tomcat-10.0.27-windows-x64\apache-tomcat-10.0.27\webapps\user-registry]
+17-Jan-2023 18:23:06.258 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\pavan\Desktop\production\apache-tomcat-10.0.27-windows-x64\apache-tomcat-10.0.27\webapps\user-registry] has finished in [69] ms
+17-Jan-2023 18:23:06.268 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+17-Jan-2023 18:23:06.394 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [2286] milliseconds
+17-Jan-2023 18:23:28.617 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+17-Jan-2023 18:23:28.636 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+17-Jan-2023 18:23:28.715 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+17-Jan-2023 18:23:28.737 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]

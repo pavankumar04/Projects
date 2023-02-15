@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  backend:
+    build: ./Spring/Workspace1/UserRegistry
+    ports:
+      -4050:4050
+  
+  frontend:
+    build: ./Angular/UserRegistry
+    ports:
+      -4200:4200

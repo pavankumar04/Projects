@@ -1,0 +1,7 @@
+0:0:0:0:0:0:0:1 - - [17/Jan/2023:18:23:10 +0530] "GET /user-registry HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [17/Jan/2023:18:23:10 +0530] "GET /user-registry/ HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [17/Jan/2023:18:23:10 +0530] "GET /user-registry/polyfills.a8b9f99b95f16261.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [17/Jan/2023:18:23:10 +0530] "GET /user-registry/main.abf76e77c0082cbc.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [17/Jan/2023:18:23:10 +0530] "GET /user-registry/runtime.2ee86f8bdf83c123.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [17/Jan/2023:18:23:10 +0530] "GET /user-registry/styles.5cc88a453d7dbb6c.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [17/Jan/2023:18:23:10 +0530] "GET /user-registry/fontawesome-webfont.e9955780856cf8aa.woff2?v=4.7.0 HTTP/1.1" 304 -

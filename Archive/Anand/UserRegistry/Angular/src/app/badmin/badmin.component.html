@@ -1,0 +1,141 @@
+<nav class="d-flex navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#" (click)="returnHome()"
+    >Hotel Management System</a
+  >
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#" (click)="returnHome()">Home </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">Hotels</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          role="button"
+          data-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Booking
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" (click)="returnUhome()">Add New Booking</a>
+          <a class="dropdown-item" (click)="goToList()">Booking History</a>
+          <!-- <div class="dropdown-divider"></div> -->
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link">Account</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <!-- <li class="breadcrumb-item"><a href="#">Home</a></li> -->
+    <li class="breadcrumb-item"><a href="#" (click)="returnHome()">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Admin</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Booking History</li>
+  </ol>
+</nav>
+
+<div class="d-flex bd-highlight mb-3 bg-light border-info">
+  <div>
+    <ul class="nav navbar-nav ml-5" data-in="fadeInDown" data-out="fadeOutUp">
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          role="button"
+          data-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Filer By Status
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" (click)="filterBookings('PLACED')">Placed</a>
+          <a class="dropdown-item" (click)="filterBookings('BOOKED')">Booked</a>
+          <a class="dropdown-item" (click)="filterBookings('REJECTED')"
+            >Rejected</a
+          >
+          <a class="dropdown-item" (click)="filterBookings('CANCELLED')"
+            >Cancelled</a
+          >
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="container-fluid mx-auto my-1">
+  <div>
+    <h3>Booking History</h3>
+  </div>
+  <div>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th>Booking Id</th>
+          <th>Guest Id</th>
+          <th>Room Id</th>
+          <th>Hotel Id</th>
+          <th>Booking date</th>
+          <th>checkIn Date</th>
+          <th>CheckOut Date</th>
+          <th>Booking Status</th>
+          <th>Total Days</th>
+          <th>Total Amount</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let booking of actualSet; let i = index">
+        <tr *ngFor="let bk of actualSet[i]">
+          <td>{{ bk.bookingId }}</td>
+          <td>{{ bk.guestId }}</td>
+          <td>{{ bk.roomId }}</td>
+          <td>{{ bk.hotelId }}</td>
+          <td>{{ bk.bookingDate }}</td>
+          <td>{{ bk.checkInDate }}</td>
+          <td>{{ bk.checkOutDate }}</td>
+          <td>{{ bk.bookingStatus }}</td>
+          <td>{{ bk.totalDays }}</td>
+          <td>{{ bk.totalAmount | currency: "INR" }}</td>
+          <td>
+            <button
+              class="btn btn-outline-success btn-sm btn-block"
+              (click)="showDetails(bk.bookingId)"
+            >
+              Details
+            </button>
+            <!-- <button class="btn btn-outline-danger btn-sm btn-block" (click)="deleteBooking(bk.bookingId)">
+              Delete
+            </button> -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- <div>
+    <button class="btn btn-outline-success" (click)="addBooking()">Add Booking</button>
+  </div>
+  <div>
+    <button class="btn btn-outline-success" (click)="addBookingByUser()">Add Booking by user</button>
+  </div> -->
+</div>

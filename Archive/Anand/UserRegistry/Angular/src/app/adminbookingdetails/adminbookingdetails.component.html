@@ -1,0 +1,127 @@
+<nav class="d-flex navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#" (click)="returnHome()"
+    >Hotel Management System</a
+  >
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item dropdown">
+        <a
+          class="btn btn-secondary dropdown-toggle"
+          href="#"
+          role="button"
+          data-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Update Booking Status
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" (click)="placed()">Placed</a>
+          <a class="dropdown-item" (click)="booked()">Booked</a>
+          <a class="dropdown-item" (click)="rejected()">Rejected</a>
+          <a class="dropdown-item" (click)="cancelled()">Cancelled</a>
+        </div>
+      </li>
+
+      <li>
+        <div
+          class="p-2 bd-highlight btn btn-outline-danger mx-3"
+          (click)="deleteBooking(booking.bookingId)"
+        >
+          Delete
+        </div>
+      </li>
+
+      <li>
+        <div
+          class="p-2 bd-highlight btn btn-outline-secondary"
+          (click)="returnAhome()"
+        >
+          Back
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<nav aria-label="breadcrumb" class="mb-3">
+  <ol class="breadcrumb">
+    <!-- <li class="breadcrumb-item"><a href="#">Home</a></li> -->
+    <li class="breadcrumb-item"><a href="#" (click)="returnHome()">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Admin</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Booking Details</li>
+  </ol>
+</nav>
+
+<div
+  class="d-flex flex-column bd-highlight mb-3 justify-content-center align-items-center expand"
+  *ngIf="!booking"
+>
+  <div class="p-2 bd-highlight alert alert-danger" role="alert">
+    Invalid Booking Id
+  </div>
+</div>
+
+<div class="card expand" style="justify-content: center" *ngIf="booking">
+  <div class="card" style="align-items: center">
+    <div class="card-title">
+      <h3>Booking Details</h3>
+    </div>
+    <div class="card-body">
+      <table class="table table-bordered">
+        <tr>
+          <td class="table-info">Booking Id</td>
+          <td>{{ booking.bookingId }}</td>
+        </tr>
+        <tr>
+          <td class="table-info">Guest Id</td>
+          <td>{{ booking.guestId }}</td>
+        </tr>
+        <tr>
+          <td class="table-info">Room Id</td>
+          <td>{{ booking.roomId }}</td>
+        </tr>
+        <tr>
+          <td class="table-info">Hotel Id</td>
+          <td>{{ booking.hotelId }}</td>
+        </tr>
+
+        <tr>
+          <td class="table-info">bookingDate</td>
+          <td>{{ booking.bookingDate }}</td>
+        </tr>
+        <tr>
+          <td class="table-info">checkInDate</td>
+          <td>{{ booking.checkInDate }}</td>
+        </tr>
+        <tr>
+          <td class="table-info">checkOutDate</td>
+          <td>{{ booking.checkOutDate }}</td>
+        </tr>
+        <tr>
+          <td class="table-info">bookingStatus</td>
+          <td>{{ booking.bookingStatus }}</td>
+        </tr>
+        <tr>
+          <td class="table-info">totalDays</td>
+          <td>{{ booking.totalDays }}</td>
+        </tr>
+        <tr>
+          <td class="table-info">totalAmount</td>
+          <td>{{ booking.totalAmount | currency: "INR" }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
