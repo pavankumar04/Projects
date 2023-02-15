@@ -1,0 +1,55 @@
+<div id="intro" class="">
+  <div class="mask" style="background-color: rgba(0, 0, 0, 0.8)">
+    <div class="container-fluid d-flex align-items-center justify-content-center text-center view">
+      <div class="text-white">
+        <h1 class="mb-5">Choose your stay</h1>
+        <form class="form-signin" #bForm="ngForm" (ngSubmit)="addNewBooking()" novalidate>
+          <div class="form-group">
+            <input type="date" id="checkIn" #checkIn="ngModel" [class.is-invalid]="checkIn.invalid && checkIn.touched"
+              name="checkIn" class="form-control" placeholder="checkIn Date" required [(ngModel)]="bdetails.checkInDate"
+              autofocus />
+            <small class="text-danger" [class.d-none]="checkIn.valid || checkIn.untouched">checkIn Date is
+              required</small>
+          </div>
+
+          <div class="form-group">
+            <input type="date" id="checkOut" #checkOut="ngModel"
+              [class.is-invalid]="checkOut.invalid && checkOut.touched" name="checkOut" class="form-control"
+              placeholder="checkOut Date" [(ngModel)]="bdetails.checkOutDate" required />
+
+            <small class="text-danger" [class.d-none]="checkOut.valid || checkOut.untouched">checkOut Date is
+              required</small>
+            <div *ngIf="checkOut.valid">
+              <small class="text-danger" [class.d-none]="
+                  bForm.value.checkOut > bForm.value.checkIn ? true : false
+                ">checkOut Date should be greater than checkIn Date
+              </small>
+            </div>
+          </div>
+
+          <button [disabled]="bForm.form.invalid" class="btn btn-lg btn-primary btn-block mt-5" type="submit">
+            Place bdetails
+          </button>
+
+          <button class="btn btn-lg btn-primary btn-block mt-3" type="button" (click)="returnUhome()">
+            Back
+          </button>
+        </form>
+      </div>
+
+      <!-- <div>
+        <table>
+          <tr>
+            <td>No of Days</td>
+            <td>{{bdetails.checkOutDate.valueOf() - this.bdetails.checkInDate.valueOf() }}</td>
+          </tr>
+          <tr>
+            <td>Total Amount</td>
+            <td>{{ details.cost * bdetails.checkOutDate.getDate() - this.bdetails.checkInDate.getDate() }}</td>
+          </tr>
+
+        </table>
+      </div> -->
+    </div>
+  </div>
+</div>

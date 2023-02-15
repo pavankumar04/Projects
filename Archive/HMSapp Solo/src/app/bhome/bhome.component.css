@@ -1,0 +1,11 @@
+#intro {
+  background-image: url(../../assets/seasidelow.webp);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.view {
+  height: 100vh;
+}

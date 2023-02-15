@@ -1,0 +1,108 @@
+<!-- Background image -->
+<div id="intro" class="">
+  <div class="mask" style="background-color: rgba(0, 0, 0, 0.8)">
+    <div
+      class="container-fluid d-flex align-items-center justify-content-center text-center view"
+    >
+      <div class="text-white">
+        <h1 class="mb-5">Details required to enter into a booking page</h1>
+
+        <form class="form-signin" #userForm="ngForm" novalidate>
+          <div class="form-group">
+            <input
+              type="number"
+              id="guestId"
+              #guestId="ngModel"
+              [class.is-invalid]="guestId.invalid && guestId.touched"
+              name="guestId"
+              class="form-control"
+              placeholder="User Id"
+              required
+              [(ngModel)]="details.guestId"
+              autofocus
+            />
+            <small
+              class="text-danger"
+              [class.d-none]="guestId.valid || guestId.untouched"
+              >Guest Id is required</small
+            >
+          </div>
+
+          <div class="form-group">
+            <input
+              type="number"
+              id="hotelId"
+              #hotelId="ngModel"
+              [class.is-invalid]="hotelId.invalid && hotelId.touched"
+              name="hotelId"
+              class="form-control"
+              placeholder="Hotel Id"
+              required
+              [(ngModel)]="details.hotelId"
+            />
+            <small
+              class="text-danger"
+              [class.d-none]="hotelId.valid || hotelId.untouched"
+              >Hotel Id is required</small
+            >
+          </div>
+
+          <div class="form-group">
+            <input
+              type="number"
+              id="roomId"
+              #roomId="ngModel"
+              [class.is-invalid]="roomId.invalid && roomId.touched"
+              name="roomId"
+              class="form-control"
+              placeholder="Room Id"
+              required
+              [(ngModel)]="details.roomId"
+            />
+            <small
+              class="text-danger"
+              [class.d-none]="roomId.valid || roomId.untouched"
+              >Room Id is required</small
+            >
+          </div>
+
+          <div class="form-group">
+            <input
+              type="number"
+              id="cost"
+              #cost="ngModel"
+              [class.is-invalid]="cost.invalid && cost.touched"
+              name="cost"
+              class="form-control"
+              placeholder="Cost"
+              required
+              [(ngModel)]="details.cost"
+            />
+            <small
+              class="text-danger"
+              [class.d-none]="cost.valid || cost.untouched"
+              >Cost is required</small
+            >
+          </div>
+
+          <button
+            [disabled]="userForm.form.invalid"
+            class="btn btn-lg btn-primary btn-block mt-5"
+            type="button"
+            (click)="goToCart()"
+          >
+            Go to Booking Page
+          </button>
+          <button
+            type="button"
+            class="btn btn-lg btn-primary btn-block mt-3"
+            (click)="returnHome()"
+          >
+            Back
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Background image -->
