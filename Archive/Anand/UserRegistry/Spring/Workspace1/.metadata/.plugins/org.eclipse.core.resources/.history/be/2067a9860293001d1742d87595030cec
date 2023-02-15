@@ -1,3 +1,0 @@
-server.port=4050
-userId=id
-cors.url=http://localhost:4200

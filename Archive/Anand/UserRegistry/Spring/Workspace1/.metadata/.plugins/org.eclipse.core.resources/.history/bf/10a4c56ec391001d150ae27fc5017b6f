@@ -1,5 +1,0 @@
-package com.demo.users.exceptions;
-
-public class UserNotFoundException {
-
-}
